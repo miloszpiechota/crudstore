@@ -2,6 +2,7 @@ package com.store.models;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import lombok.Getter;
@@ -27,6 +28,7 @@ public class ProductDto {
     @Size(min = 10, message = "The description should be at least 10 characters")
     @Size(max = 2000, message = "The description cannot exceed 2000 characters")
     private String description;
+
 
     private MultipartFile imageFile;
 
