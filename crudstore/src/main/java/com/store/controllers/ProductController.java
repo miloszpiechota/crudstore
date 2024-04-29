@@ -50,9 +50,9 @@ public class ProductController {
                                 BindingResult result) {
 
 
-//    if(productDto.getImageFile().isEmpty()){
-//        result.addError(new FieldError("productDto","imageFile","The image file is required"));
-//    }
+    if(productDto.getImageFile().isEmpty()){
+        result.addError(new FieldError("productDto","imageFile","The image file is required"));
+    }
 
     if(result.hasErrors()){
         return "products/CreateProduct";
